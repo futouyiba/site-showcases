@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html class="-webkit- wf-adobegaramondpro-i4-inactive wf-brandongrotesque-n4-inactive wf-brandongrotesque-n7-inactive wf-inactive"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    
+  <!--<base href="http://www.144g.com/geren_litikongjian/">--><base href=".">
+  <title>双曲线游戏</title>
+  <script src="./index_files/jrj6out.js"></script>
+<style type="text/css">.tk-adobe-garamond-pro{font-family:"adobe-garamond-pro",sans-serif;}.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}</style><style type="text/css">@font-face{font-family:adobe-garamond-pro;src:url(https://use.typekit.net/af/d7fa29/0000000000000000000130e5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("woff2"),url(https://use.typekit.net/af/d7fa29/0000000000000000000130e5/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("woff"),url(https://use.typekit.net/af/d7fa29/0000000000000000000130e5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/87035b/0000000000000000000132df/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2"),url(https://use.typekit.net/af/87035b/0000000000000000000132df/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff"),url(https://use.typekit.net/af/87035b/0000000000000000000132df/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/37f12c/0000000000000000000132e3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("woff2"),url(https://use.typekit.net/af/37f12c/0000000000000000000132e3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("woff"),url(https://use.typekit.net/af/37f12c/0000000000000000000132e3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("opentype");font-weight:700;font-style:normal;}</style><script>try{Typekit.load({ async: false });}catch(e){}</script>
+  
+
+      <style>
+     
+      body {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.intro-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+}
+
+h1 {
+  font-family: '微软雅黑', sans-serif;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+@media screen and (min-width: 860px) {
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
+.fancy-text {
+  font-family: "adobe-garamond-pro",sans-serif;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 17px;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-family: '微软雅黑', sans-serif;
+  text-transform: uppercase;
+  min-width: 200px;
+  margin-top: 30px;
+}
+.button:hover .border {
+  box-shadow: 0px 0px 10px 0px white;
+}
+.button:hover .border .left-plane, .button:hover .border .right-plane {
+  transform: translateX(0%);
+}
+.button:hover .text {
+  color: #121212;
+}
+.button .border {
+  border: 1px solid white;
+  transform: skewX(-20deg);
+  height: 32px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  transition: .10s ease-out;
+}
+.button .border .left-plane, .button .border .right-plane {
+  position: absolute;
+  background: white;
+  height: 32px;
+  width: 100px;
+  transition: .15s ease-out;
+}
+.button .border .left-plane {
+  left: 0;
+  transform: translateX(-100%);
+}
+.button .border .right-plane {
+  right: 0;
+  transform: translateX(100%);
+}
+.button .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .15s ease-out;
+}
+
+.x-mark {
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.x-mark:hover .right {
+  transform: rotate(-45deg) scaleY(1.2);
+}
+.x-mark:hover .left {
+  transform: rotate(45deg) scaleY(1.2);
+}
+.x-mark .container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.x-mark .left, .x-mark .right {
+  width: 2px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  border-radius: 3px;
+  transition: .15s ease-out;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.x-mark .right {
+  transform: rotate(-45deg);
+}
+.x-mark .left {
+  transform: rotate(45deg);
+}
+
+.sky-container {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 2%;
+  text-align: center;
+  opacity: 0;
+}
+@media screen and (min-width: 860px) {
+  .sky-container {
+    top: 18%;
+    right: 12%;
+    left: auto;
+  }
+}
+.sky-container__left, .sky-container__right {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+}
+.sky-container__left h2, .sky-container__right h2 {
+  font-family: '微软雅黑', sans-serif;
+  font-size: 26px;
+  line-height: 26px;
+  margin: 0;
+}
+@media screen and (min-width: 860px) {
+  .sky-container__left h2, .sky-container__right h2 {
+    font-size: 72px;
+    line-height: 68px;
+  }
+}
+.sky-container__left {
+  margin-right: 5px;
+}
+.sky-container .thirty-one {
+  letter-spacing: 4px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.twitter:hover a {
+  transform: rotate(-45deg) scale(1.05);
+}
+.twitter:hover i {
+  color: #21c2ff;
+}
+.twitter a {
+  bottom: -40px;
+  right: -75px;
+  transform: rotate(-45deg);
+}
+.twitter i {
+  bottom: 7px;
+  right: 7px;
+  color: #00ACED;
+}
+
+.social-icon a {
+  position: absolute;
+  background: white;
+  color: white;
+  box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  transform-origin: 50% 50%;
+  transition: .15s ease-out;
+}
+.social-icon i {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+  transition: .15s ease-out;
+}
+
+.youtube:hover a {
+  transform: rotate(45deg) scale(1.05);
+}
+.youtube:hover i {
+  color: #ec4c44;
+}
+.youtube a {
+  bottom: -40px;
+  left: -75px;
+  transform: rotate(45deg);
+}
+.youtube i {
+  bottom: 7px;
+  left: 7px;
+  color: #E62117;
+}
+
+    </style>
+
+  <script src="./index_files/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <!-- This pen isn't a fan of small view heights, check it out in  fullpage view for optimal viewing	 -->
+  <div class="x-mark" style="opacity: 1;">
+		<div class="container">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</div>
+	<div class="intro-container" style="opacity: 0;">
+		
+		<h1>“数学驱动第九艺术”<br>双曲线游戏</h1>
+    <!-- <h2>我们是游戏人，分别曾经主导和参与过的项目有《漫威格斗》《混沌与秩序》《文明：大革命》《西游圣徒》等</h2> -->
+		<div class="button shift-camera-button">
+			<div class="border">
+				<div class="left-plane"></div>
+				<div class="right-plane"></div>
+			</div>	
+			<div class="text">【繁星】解决方案</div>
+		</div>
+	</div>
+	<div class="sky-container" style="opacity: 1;">
+		<div class="text-right sky-container__left">
+			<h2 class="portfolio">
+				让开发多人游戏像单机一样简单			</h2>
+			<h2 class="resurrection">
+				玩家社区自主把握运行与反作弊			</h2>
+        <a style=" font-family:微软雅黑; text-decoration:none; font-size:20px; color:#FFF; margin-top:10px;" href="./stars.html" target="_blank">
+          【繁星】解决方案介绍			</a><br>
+          <a style=" font-family:微软雅黑; text-decoration:none; font-size:20px; color:#FFF; margin-top:10px;" href="./destinedstone.html" target="_blank">
+            【落子无悔】示例游戏			</a><br>
+            <a style=" font-family:微软雅黑; text-decoration:none; font-size:20px; color:#FFF; margin-top:10px;" href="./renaissance.html" target="_blank">
+              【复兴】示例游戏			</a>
+		</div>
+		<!--<div class="text-left sky-container__right">
+			<h2 class="08">
+				08
+			</h2>
+			<h2 class="thirty-one">
+				31
+			</h2>
+			<h2 class="2016">
+				2016
+			</h2>
+		</div>-->
+	</div>
+
+
+  <script src="./index_files/jquery.min.js"></script>
+<script src="./index_files/TweenMax.min.js"></script>
+<script src="./index_files/three.min.js"></script>
+      <script src="./index_files/index.js"></script><canvas width="980" height="490" style="width: 980px; height: 490px;"></canvas>
+<audio autoplay="autoplay">
+<source src="http://p2.music.126.net/fyamTWNajxgD04jCR3AqAA==/5879088674054461.mp3" type="audio/mpeg">
+</audio>
+</body></html>
